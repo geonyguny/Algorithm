@@ -1,7 +1,9 @@
 def solution(numbers, hand):
     answer = ''
     distance = [[1,3],[0,0],[1,0],[2,0],[0,1],[1,1],[2,1],[0,2],[1,2],[2,2],[0,3],[2,3]]
-    L,R = 10,11
+    L = 10
+    R = 11
+    
 
     for i in numbers:
         if i in (1,4,7):
@@ -28,6 +30,6 @@ def solution(numbers, hand):
                     answer += "L"
     return answer
 
-numbers = [1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5]
+numbers = [1, 2, 4, 5, 8, 2, 1, 4, 5, 9, 5]
 hand = "right"
 print(solution(numbers, hand))
