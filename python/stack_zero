@@ -1,0 +1,18 @@
+class stack:
+    def __init__(self):  # 스택 객체 생성
+        self.items = []
+
+    def push(self, item):  # 스택 요소 추가 push(.append())
+        self.items.append(item)
+
+    def pop(self):  # 스택 요소 삭제 pop()
+        return self.items.pop()
+
+import sys
+stk = stack()
+n = int(input())
+for i in range(n):
+    m = int(sys.stdin.readline().rstrip())
+    if m>0: stk.push(m)
+    else: stk.pop()
+print(sum(stk.items))

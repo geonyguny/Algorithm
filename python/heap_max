@@ -1,0 +1,9 @@
+import heapq, sys
+n = int(input())
+heap = []
+for i in range(n):
+    nh = int(sys.stdin.readline().rstrip())
+    if nh>0: heapq.heappush(heap,(-nh,nh))
+    else:
+        if len(heap) > 0: print(heapq.heappop(heap)[1]);
+        else: print(0)

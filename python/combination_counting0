@@ -1,0 +1,10 @@
+n,m = map(int,input().split())
+cnt2,cnt5 = 0,0
+def cnt_num(i, j):
+    ans = 0
+    while i: i //= j;ans += i
+    return ans
+
+cnt5 = cnt_num(n,5)-cnt_num(m,5)-cnt_num(n-m,5)
+cnt2 = cnt_num(n,2)-cnt_num(m,2)-cnt_num(n-m,2)
+print(min(cnt2,cnt5))

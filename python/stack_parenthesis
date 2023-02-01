@@ -1,0 +1,15 @@
+num = int(input())
+
+for _ in range(num):
+    result = []
+    count = 0
+    n = input()
+    for i in n:
+        if i == "(": result.append(i)
+        elif i == ")":
+            if len(result) == 0:
+                count = -1
+                break
+            result.pop()
+    if count == -1 or len(result) != 0: print("NO")
+    else: print("YES")

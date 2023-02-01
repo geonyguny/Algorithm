@@ -1,0 +1,29 @@
+import sys
+from collections import deque
+
+class queue:
+    def __init__(self):
+        self.q = deque()
+    def push(self,x):
+        self.q.append(x)
+    def pop(self):
+        return self.q.popleft() if not self.empty() else -1
+    def size(self):
+        return len(self.q)
+    def empty(self):
+        return int(len(self.q)==0)
+    def front(self):
+        return self.q[0] if not self.empty() else -1
+    def back(self):
+        return self.q[-1] if not self.empty() else -1
+
+que = queue()
+n=int(input())
+for i in range(n):
+    a = sys.stdin.readline().rstrip().split()
+    if a[0] == 'push': que.push(int(a[1]))
+    elif a[0] == 'pop': print(que.pop())
+    elif a[0] == 'size': print(que.size())
+    elif a[0] == 'empty': print(que.empty())
+    elif a[0] == 'front': print(que.front())
+    elif a[0] == 'back': print(que.back())

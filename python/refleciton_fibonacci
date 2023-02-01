@@ -1,0 +1,6 @@
+n = int(input())
+f = [0]*22
+f[1] = 1
+for i in range(n):
+    f[i+2] = f[i]+f[i+1]
+print(f[n])

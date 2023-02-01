@@ -1,0 +1,5 @@
+import itertools as it
+n,m = map(int,input().split())
+narr = [i+1 for i in range(n)]
+for i in it.combinations_with_replacement(narr,m):
+    print(*i)
